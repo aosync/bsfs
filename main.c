@@ -1,16 +1,7 @@
 #include <stdio.h>
-#include <stddef.h>
-#include <stdint.h>
-
-#include <io/io.h>
-#include <bs/bs.h>
-// #include <page/file.h>
-#include <map/map.h>
-#include <rt.h>
+#include <string.h>
 
 #include <cmd/cmd.h>
-
-#define BLANK(X) (~((u64)-1 << (X)))
 
 int main(int argc, char **argv) {
 	if (argc < 3) {
