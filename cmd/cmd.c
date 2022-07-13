@@ -71,6 +71,7 @@ IoFile *cmd_create_at(IoFile *root, char *name) {
 #define mkdir _mkdir
 #else
 #include <unistd.h>
+#include <sys/stat.h>
 // Call mkdir with 0o755
 // XXX annoying assumption
 #define mkdir(X) mkdir((X), 493)

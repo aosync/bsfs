@@ -11,6 +11,7 @@ extern char *cmd_cmd_name;
 int cmd_format(int, char**);
 int cmd_cat(int, char**);
 int cmd_cp(int, char**);
+int cmd_mkdir(int, char**);
 
 char *cmd_islocal(char *name);
 IoFile *cmd_open_disk(void);

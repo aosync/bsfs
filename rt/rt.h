@@ -6,6 +6,15 @@
 
 #define nil ((void*)0)
 
+#ifdef _WIN64
+typedef long long int ssize_t;
+typedef size_t off_t;
+#else
+#include <sys/types.h>
+#include <stddef.h>
+#include <stdlib.h>
+#endif
+
 void *alloc(size_t n);
 void *ralloc(void *ptr, size_t n);
 
@@ -34,21 +43,18 @@ typedef unsigned long long int u64;
 static_assert(sizeof(i64) == 8, "i64 is not 64-bits");
 static_assert(sizeof(u64) == 8, "u64 is not 64-bits");
 
-typedef long long int ssize_t;
 static_assert(sizeof(ssize_t) == 8, "ssize_t is not 64-bits");
 
-typedef size_t off_t;
+static_assert(sizeof(off_t) == 8, "off_t is not 64-bits");
 
 #ifdef __GNUC__
 #define PACK( __Declaration__ ) __Declaration__ __attribute__((__packed__))
 #define tls __thread
-#include <alloca.h>
 #endif
 
 #ifdef _MSC_VER
 #define PACK( __Declaration__ ) __pragma( pack(push, 1) ) __Declaration__ __pragma( pack(pop))
 #define tls __declspec( thread )
-#define alloca _alloca
 #endif
 
 #endif

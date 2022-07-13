@@ -37,7 +37,7 @@ int cmd_format(int argc, char **argv) {
 	
 	size_t rsvd = (count - 1) / 4096 + 1;
 
-	fprintf(stderr, "bsfs.format: copied %lld bytes, reserving %llu blocks\n", count, rsvd);
+	fprintf(stderr, "bsfs.format: copied %ld bytes, reserving %lu blocks\n", count, rsvd);
 
 	Bs bs;
 	bs_init(&bs, dst);

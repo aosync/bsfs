@@ -5,8 +5,8 @@
 #define BLKSZ(X) (1 << (X))
 #define BLANK(X) (~((u64)-1 << (X)))
 
-u64 map_translate(Map *ctx, u64 addr) {
-	i8 highest = map_idx(ctx, addr);
+u64 map_translate(Map *ctx, size_t addr) {
+	int highest = map_idx(ctx, addr);
 	ctx->invalidate = 0;
 
 	u8 level = 0;

@@ -1,6 +1,7 @@
 #include "bs.h"
 
 #include <io/limit.h>
+#include <string.h>
 #include <stdio.h>
 
 #define BLKSZ(X) (1 << (X))
