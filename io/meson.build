@@ -3,6 +3,6 @@ io_src = [
 	'limit.c'
 ]
 
-io = static_library('io', io_src, include_directories: bsfs_inc)
+io = static_library('io', io_src, include_directories: bsfs_inc, native: true)
 
 bsfs_mod += io

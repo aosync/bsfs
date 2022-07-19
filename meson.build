@@ -13,4 +13,4 @@ subdir('cmd')
 subdir('io')
 subdir('map')
 
-bsfs = executable('bsfs', bsfs_src, link_with: bsfs_mod, include_directories: bsfs_inc)
+bsfs = executable('bsfs', bsfs_src, link_with: bsfs_mod, include_directories: bsfs_inc, native: true)
