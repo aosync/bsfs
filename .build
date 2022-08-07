@@ -1,0 +1,13 @@
+mod.mkdep(
+	bcast_includes=CWD
+)
+
+mod.submodule("rt")
+mod.submodule("bs")
+mod.submodule("cmd")
+mod.submodule("io")
+mod.submodule("map")
+
+mod.src("main.c")
+
+mod.mkexe("bsfs")

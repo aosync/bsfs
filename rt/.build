@@ -1,0 +1,5 @@
+mod.src("rt.c")
+
+mod.mkdep(
+	bcast_includes=CWD
+)

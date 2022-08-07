@@ -1,0 +1,7 @@
+mod.src(
+	"cat.c",
+	"cmd.c",
+	"cp.c",
+	"format.c",
+	"mkdir.c"
+)
